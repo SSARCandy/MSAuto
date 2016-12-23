@@ -1,0 +1,16 @@
+{
+  "name": "msauto",
+  "version": "1.0.0",
+  "description": "automation script for MSA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SSARCandy",
+  "license": "ISC",
+  "dependencies": {
+    "bl": "^1.2.0",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}
