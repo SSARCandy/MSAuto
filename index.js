@@ -13,6 +13,7 @@ request(msaapi.getRequestOptions(api.search.top, {}))
   .pipe(zlib.createGunzip())
   .pipe(bl(function (err, data) {
     data = JSON.parse(data.toString());
+    console.log('--------------START------------------');
     if (data.response.error_code != 0) {
       console.log(`ERROR when ${api.search.top}`);
       return;
@@ -52,7 +53,7 @@ request(msaapi.getRequestOptions(api.search.top, {}))
           if (data.response.error_code != 0) {
             console.log(`ERROR when collecting ${s.point_id}`);
           } else {
-            console.log(`collecting.... ${s.point_id} done.`);  
+            console.log(`collecting.... ${s.point_id} done.`);
           }
         }));
     });
