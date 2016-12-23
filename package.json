@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bl": "^1.2.0",
+    "console-stamp": "^0.2.4",
     "request": "^2.79.0",
     "request-promise": "^4.1.1"
   }

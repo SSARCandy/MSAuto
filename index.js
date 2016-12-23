@@ -1,5 +1,6 @@
 'use strict';
 
+require('console-stamp')(console, 'yyyy/mm/dd HH:MM:ss');
 const request = require('request-promise');
 const zlib = require('zlib');
 const bl = require('bl');
@@ -11,10 +12,14 @@ const msaapi = require('./msaapi');
 request(msaapi.getRequestOptions(api.search.top, {}))
   .pipe(zlib.createGunzip())
   .pipe(bl(function (err, data) {
-    data = data.toString();
-    let {search: {searching}} = JSON.parse(data);
-    console.log(searching);
+    data = JSON.parse(data.toString());
+    if (data.response.error_code != 0) {
+      console.log(`ERROR when ${api.search.top}`);
+      return;
+    }
 
+
+    let {search: {searching}} = data;
     let unCollectedIds = searching.map(s => s.point_id);
     unCollectedIds = [1, 2, 3, 4, 5, 6].filter(s => !~unCollectedIds.indexOf(s));
 
