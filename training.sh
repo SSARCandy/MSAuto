@@ -7,6 +7,7 @@
 #    724       4
 #    730       5
 
+echo "[log] $(date)"
 
 for training_id in {1..5}
 do
