@@ -12,6 +12,13 @@ exports.api = {
         top: 'training/top/',
         start: 'training/battle_start/',
         win: 'training/battle_win/'
+    },
+    sneak: {
+        reset: 'sneak/reset/',
+        top: 'sneak/top/',
+        start: 'sneak/battle_start/',
+        win: 'sneak/battle_win/',
+        decide: 'sneak/battle_decide/'
     }
 }
 
