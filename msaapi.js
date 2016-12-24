@@ -1,12 +1,17 @@
 'use strict';
 
-const myHeader = require('./header.json');
+const myHeader = require('./fixtures/header.json');
 const BASE_URL = 'https://msaapi.snkplaymore.info/';
 exports.api = {
     search: {
         top: 'search/top/',
         get: 'search/get/',
         start: 'search/start/'
+    },
+    training: {
+        top: 'training/top/',
+        start: 'training/battle_start/',
+        win: 'training/battle_win/'
     }
 }
 
