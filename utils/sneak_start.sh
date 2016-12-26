@@ -8,7 +8,7 @@ curl -X POST \
     -H "terminal_id: gUTLQezb0NeYMvZrllqqMYao0+n7es/xR53tTE8lVpmpynmZU8v+ow==" \
     -H "osversion: 5.1.1" \
     -H "isr: 0" \
-    -H "master_ver: 1180002" \
+    -H "master_ver: 1180003" \
     -H "app_ver: 1180000" \
     -H "User-Agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; D5503 Build/14.6.A.1.236)" \
     -H "Host: msaapi.snkplaymore.info" \
@@ -26,7 +26,7 @@ curl -X POST \
     -H "terminal_id: gUTLQezb0NeYMvZrllqqMYao0+n7es/xR53tTE8lVpmpynmZU8v+ow==" \
     -H "osversion: 5.1.1" \
     -H "isr: 0" \
-    -H "master_ver: 1180002" \
+    -H "master_ver: 1180003" \
     -H "app_ver: 1180000" \
     -H "User-Agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; D5503 Build/14.6.A.1.236)" \
     -H "Host: msaapi.snkplaymore.info" \
@@ -44,7 +44,7 @@ curl -X POST \
     -H "terminal_id: gUTLQezb0NeYMvZrllqqMYao0+n7es/xR53tTE8lVpmpynmZU8v+ow==" \
     -H "osversion: 5.1.1" \
     -H "isr: 0" \
-    -H "master_ver: 1180002" \
+    -H "master_ver: 1180003" \
     -H "app_ver: 1180000" \
     -H "User-Agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; D5503 Build/14.6.A.1.236)" \
     -H "Host: msaapi.snkplaymore.info" \
