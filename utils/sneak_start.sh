@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./send_request.sh
+source ./utils/send_request.sh
 
 # Start sneak stage by id
 send_request \
