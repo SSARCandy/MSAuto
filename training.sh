@@ -7,8 +7,10 @@
 #    724       4
 #    730       5
 
-echo "[log] $(date)"
+echo "[log] ---------- $(date) ----------"
 source ./utils/send_request.sh
+
+send_request "" "https://msaapi.snkplaymore.info/training/top/"
 
 for training_id in {1..5}
 do
