@@ -1,7 +1,7 @@
 #!/bin/bash
 
 app_ver='1180000'
-master_ver='1180004'
+master_ver='1180005'
 
 # $1 = data string
 # $2 = url string
