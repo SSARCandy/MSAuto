@@ -17,4 +17,7 @@
 ```bash
 # Auto P.O.W RESCUE
 $ node sneak.js <stages>  # stages: 1~10
+
+# Auto EXTRA OPS
+$ ./event.sh <times> 
 ```
