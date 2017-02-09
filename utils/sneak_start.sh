@@ -4,7 +4,7 @@ source ./utils/send_request.sh
 
 # Start sneak stage by id
 send_request \
-    "cover=2&deck_no=3&stage_id=$1&unit_ids[]=15&unit_ids[]=16&unit_ids[]=17&unit_ids[]=18&unit_ids[]=19&unit_ids[]=21&unit_ids[]=84&unit_ids[]=82&unit_ids[]=271&unit_ids[]=340&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50" \
+    "cover=2&deck_no=2&stage_id=$1&unit_ids[]=15&unit_level[]=50" \
     "https://msaapi.snkplaymore.info/sneak/battle_start/?kpi1=$1"
 
 
