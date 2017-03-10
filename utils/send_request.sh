@@ -12,7 +12,7 @@ function send_request {
     curl -X POST \
         -H "devicemodel: D5503" \
         -H "terminal_type: Android" \
-        -H "terminal_id: gUTLQezb0NeYMvZrllqqMYao0+n7es/xR53tTE8lVpmpynmZU8v+ow==" \
+        -H "terminal_id: 9bhuFZl6jx9IakWMcoKq3jc1oO+UkCbhFqcOJG0xh/2pynmZU8v+ow==" \
         -H "osversion: 5.1.1" \
         -H "isr: 0" \
         -H "app_ver: $app_ver" \
