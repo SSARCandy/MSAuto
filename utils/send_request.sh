@@ -1,6 +1,6 @@
 #!/bin/bash
 
-app_ver='2000500'
+app_ver='2010000'
 #master_ver='1190000'
 
 # $1 = data string
@@ -10,18 +10,13 @@ function send_request {
     url=$2
 
     curl -X POST \
-        -H "devicemodel: D5503" \
-        -H "terminal_type: Android" \
         -H "terminal_id: 9bhuFZl6jx9IakWMcoKq3jc1oO+UkCbhFqcOJG0xh/2pynmZU8v+ow==" \
-        -H "osversion: 5.1.1" \
         -H "isr: 0" \
         -H "app_ver: $app_ver" \
-        -H "User-Agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; D5503 Build/14.6.A.1.236)" \
         -H "Host: msaapi.snkplaymore.info" \
         -H "Connection: Keep-Alive" \
         -H "Accept-Encoding: gzip" \
         -H "Content-Type: application/x-www-form-urlencoded" \
         -d "$data" \
         "$url"
-        #-H "master_ver: $master_ver" \
 }
