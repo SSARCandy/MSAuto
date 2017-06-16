@@ -1,6 +1,6 @@
 #!/bin/bash
 
-app_ver='2030100'
+app_ver='2070000'
 #master_ver='1190000'
 
 # $1 = data string
