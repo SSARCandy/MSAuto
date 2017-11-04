@@ -2,7 +2,7 @@
 
 source ./utils/send_request.sh
 
-stage_id=2117
+stage_id=2672
 
 drop_num=4
 
@@ -10,7 +10,7 @@ for ((i = 1; i <= $1; i++));
 do
     echo "Start event $i"
     send_request \
-        "cover=1&deck_no=1&stage_id=2117&unit_ids[]=167&unit_ids[]=489&unit_ids[]=281&unit_ids[]=498&unit_ids[]=544&unit_ids[]=568&unit_ids[]=234&unit_ids[]=22&unit_ids[]=15&unit_ids[]=553&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50" \
+        "cover=1&deck_no=1&stage_id=$stage_id&unit_ids[]=167&unit_ids[]=400&unit_ids[]=542&unit_ids[]=618&unit_ids[]=589&unit_ids[]=649&unit_ids[]=26&unit_ids[]=120&unit_ids[]=163&unit_ids[]=653&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50" \
         "https://msaapi.snkplaymore.info/event/pile/battle_start/?kpi1=$stage_id" > /dev/null
 
     send_request \
