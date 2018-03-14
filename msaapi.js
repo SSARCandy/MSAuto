@@ -18,7 +18,17 @@ exports.api = {
         top: 'sneak/top/',
         start: 'sneak/battle_start/',
         win: 'sneak/battle_win/',
-        decide: 'sneak/battle_decide/'
+        decide: 'sneak/battle_decide/',
+        shop: {
+            update: 'sneak_shop/update/',
+            buy: 'sneak_shop/buy'
+        }
+    },
+    one_on_one: {
+        shop: {
+            update: 'off_1on1_btl_shop/update',
+            buy: 'off_1on1_btl_shop/buy'
+        }
     }
 }
 
