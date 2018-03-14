@@ -4,18 +4,20 @@ source ./utils/send_request.sh
 
 # easy10 =
 # hell10 = 1774
-stage_id=2850 #hell stage 4
+stage_id=3412 #hell stage 4
 
 # easy 3
 # hard 4
 # hell 5
 drop_num=5
 
+units="unit_ids[]=737&unit_ids[]=669&unit_ids[]=728&unit_ids[]=755&unit_ids[]=739&unit_ids[]=632&unit_ids[]=784&unit_ids[]=113&unit_ids[]=124&unit_ids[]=777"
+
 for ((i = 1; i <= $1; i++));
 do
     echo "Start event level=HELL......$i"
     send_request \
-        "cover=1&deck_no=1&stage_id=$stage_id&unit_ids[]=585&unit_ids[]=631&unit_ids[]=557&unit_ids[]=608&unit_ids[]=593&unit_ids[]=677&unit_ids[]=687&unit_ids[]=319&unit_ids[]=152&unit_ids[]=641&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50" \
+        "cover=1&deck_no=1&stage_id=$stage_id&$units&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50" \
         "https://msaapi.snkplaymore.info/event/marathon/battle_start/?kpi1=$stage_id"  > /dev/null
 
     send_request \
