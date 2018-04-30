@@ -1,23 +1,88 @@
 # MSAuto
 
-## Auto 
+Need to setup config files:
+- `fixtures/header.json`
+- `utils/send_request.sh`
 
-```bash
+## Treasure Hunt
+
+```sh
+# cronjob
+*/10 * * * * /usr/local/bin/node ~/github/MSAuto/treasure.js
+
+# manual
+$ node treasure.js
+```
+
+## Combat School
+
+```sh
+# cronjob
+3 3 * * * cd ~/github/MSAuto/ && /bin/bash training.sh > /dev/null
+
+# manual
+$ ./training.sh > /dev/null
+```
+
+## Sneak
+
+```sh
+# cronjob
+5,10 3 * * * cd ~/github/MSAuto && /bin/bash ./utils/sneak_reset.sh && /usr/local/bin/node sneak.js 10
+
+# manual
+$ ./utils/sneak_reset.sh && node sneak.js 10
+```
+
+## MSP Crank
+   
+```sh
+# manual
+$ ./msp_crank 100
+```
+
+## Free Ad Reward
+   
+```sh
 # cronjob setting
-
-# Auto TREASURE HUNT
-*/10 * * * * /usr/local/bin/node ~/github/MSAuto/treasure.js >> msa_log_treasure
-
-# Auto COMBAT SCHOOL
-   5 3 * * * /bin/bash ~/github/MSAuto/training.sh >> msa_log_training
+# every 30 minutes
+*/30 * * * * /bin/bash ad_movie_grant.sh
 ```
 
-## Semi-auto
+## Buy Shop Units
+> must fill in `want2buy` unit id.
 
-```bash
-# Auto P.O.W RESCUE
-$ node sneak.js <stages>  # stages: 1~10
+### sneak_shop
 
-# Auto EXTRA OPS
-$ ./event.sh <times> 
+```sh
+$ node sneak_shop.js
+
+# repeat buy
+$ while true; do node sneak_shop.js; sleep .1; done 
 ```
+
+### 1on1_shop
+
+```sh
+$ node 1_on_1_shop.js
+
+# repeat buy
+$ while true; do node 1_on_1_shop.js; sleep .1; done 
+```
+
+## Events
+> must fill `stage_id` and `unit_id`
+
+### event_pile
+
+```sh
+$ ./event_pile.sh 10 # raid times
+```
+
+### event_marathon
+
+todo...
+
+### event_marathon2nd
+
+todo...
