@@ -7,7 +7,11 @@ const bl = require('bl');
 const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
-const want2buy = [];
+const want2buy = [
+1411,
+  //1447,
+  //1501
+];
 
 //for (let x=0; x<10; x++) {
   request(msaapi.getRequestOptions(api.sneak.shop.update, {}))

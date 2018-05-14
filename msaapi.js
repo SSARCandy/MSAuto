@@ -29,7 +29,20 @@ exports.api = {
             update: 'off_1on1_btl_shop/update',
             buy: 'off_1on1_btl_shop/buy'
         }
+    },
+    team_battle: {
+        shop: {
+            update: 'off_team_btl_shop/update',
+            buy: 'off_team_btl_shop/buy'
+        }
+    },
+    guild: {
+        shop: {
+            update: 'guild_shop/update',
+            buy: 'guild_shop/buy'
+        }
     }
+    
 }
 
 exports.getRequestOptions = (url, data) => {
