@@ -8,9 +8,12 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
-1411,
-  //1447,
-  //1501
+  //1874,
+  1905,
+  //1669,
+  //1691,
+  //1621,
+  //1878,
 ];
 
 //for (let x=0; x<10; x++) {

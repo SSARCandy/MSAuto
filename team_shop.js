@@ -8,9 +8,10 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
-  //1473,
-  1415,
-  //1332
+  1661,
+  //1883,
+  //1884,
+  //1882
 ];
 
 request(msaapi.getRequestOptions(api.team_battle.shop.update, {}))

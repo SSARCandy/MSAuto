@@ -8,14 +8,9 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
-  //1336,
-  //1407,
-  1468,
-  1443,
-  //1079,
-  1469,
-  1467,
-  //1233
+  //1625,
+  1695,
+  //1699
 ];
 
 request(msaapi.getRequestOptions(api.guild.shop.update, {}))

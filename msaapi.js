@@ -25,6 +25,11 @@ exports.api = {
         }
     },
     one_on_one: {
+        top: 'off_1on1/top',
+        get_enemy: 'off_1on1/get_enemy',
+        reset_top: 'off_1on1/reset_top',
+        battle_start: 'off_1on1/battle_start',
+        battle_win: 'off_1on1/battle_win',
         shop: {
             update: 'off_1on1_btl_shop/update',
             buy: 'off_1on1_btl_shop/buy'
@@ -40,6 +45,12 @@ exports.api = {
         shop: {
             update: 'guild_shop/update',
             buy: 'guild_shop/buy'
+        }
+    },
+    event: {
+        pile: {
+            battle_start: 'event/pile/battle_start',
+            battle_win: 'event/pile/battle_win'
         }
     }
     
