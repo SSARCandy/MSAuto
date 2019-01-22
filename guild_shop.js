@@ -8,8 +8,10 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
+  54,22,63,78,38,70,84, //sliver
+  59,80,71,64 // gold
   //1625,
-  1695,
+  //1695,
   //1699
 ];
 

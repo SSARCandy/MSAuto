@@ -8,37 +8,32 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
-  //1874,
-  1905,
-  //1669,
-  //1691,
-  //1621,
-  //1878,
+  30,31,32,33,39,50,55,65,79,
+  83,
+  72
+
 ];
 
-//for (let x=0; x<10; x++) {
-  request(msaapi.getRequestOptions(api.sneak.shop.update, {}))
-    .pipe(zlib.createGunzip())
-    .pipe(bl(function (err, data) {
-      data = JSON.parse(data.toString());
-      console.log('--------------START------------------');
-      if (data.response.error_code != 0) {
-        console.log(`ERROR when ${api.sneak.shop.update}`);
-        return;
-      }
-      //console.log(data)
+request(msaapi.getRequestOptions(api.sneak.shop.update, {}))
+  .pipe(zlib.createGunzip())
+  .pipe(bl(function (err, data) {
+    data = JSON.parse(data.toString());
+    console.log('--------------START------------------');
+    if (data.response.error_code != 0) {
+      console.log(`ERROR when ${api.sneak.shop.update}`);
+      return;
+    }
+    //console.log(data)
 
-      let {info: {contents}} = data;
-      //console.log(contents)
-      
-      for (let i=0; i<contents.length; i++) {
-        if (~want2buy.indexOf(contents[i].item_id)) {
-          console.log(`[BUY] item_id ${contents[i].item_id}`);
-          request(msaapi.getRequestOptions(`${api.sneak.shop.buy}?kpi1=${contents[i].item_id}&kpi2=5`, { 'content_idx': i }))
-            //.pipe(zlib.createGunzip())
-            //.pipe(bl(function (err, data) { }));
-
-        }
+    let {info: {contents}} = data;
+    //console.log(contents)
+    
+    for (let i=0; i<contents.length; i++) {
+      if (~want2buy.indexOf(contents[i].item_id)) {
+        console.log(`[BUY] item_id ${contents[i].item_id}`);
+        request(msaapi.getRequestOptions(`${api.sneak.shop.buy}?kpi1=${contents[i].item_id}&kpi2=5`, { 'content_idx': i }))
+          //.pipe(zlib.createGunzip())
+          //.pipe(bl(function (err, data) { }));
       }
-    }));
-//}
+    }
+  }));

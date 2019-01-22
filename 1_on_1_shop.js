@@ -10,7 +10,8 @@ const msaapi = require('./msaapi');
 const want2buy = [
   //1629,
   //1665,
-  1497
+//  1497
+  55,83
 ];
 
 request(msaapi.getRequestOptions(api.one_on_one.shop.update, {}))
