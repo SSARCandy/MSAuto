@@ -1,6 +1,7 @@
 #!/bin/bash
 
-app_ver='3210000'
+app_ver=`jq '.app_ver' ./fixtures/header.json`
+terminal_id=`jq '.terminal_id' ./fixtures/header.json`
 #master_ver='1190000'
 
 # $1 = data string
@@ -10,7 +11,7 @@ function send_request {
     url=$2
 
     curl -X POST \
-        -H "terminal_id: 9bhuFZl6jx9IakWMcoKq3jc1oO+UkCbhFqcOJG0xh/2pynmZU8v+ow==" \
+        -H "terminal_id: $terminal_id" \
         -H "isr: 0" \
         -H "app_ver: $app_ver" \
         -H "Host: msaapi.snkplaymore.info" \
