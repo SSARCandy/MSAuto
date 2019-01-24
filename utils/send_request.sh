@@ -21,6 +21,6 @@ function send_request {
         -d "$data" \
         "$url" \
         | gunzip - \
-        | jq
+        | jq '.'
 
 }
