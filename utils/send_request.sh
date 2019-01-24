@@ -1,7 +1,7 @@
 #!/bin/bash
 
-app_ver=`jq '.app_ver' ./fixtures/header.json`
-terminal_id=`jq '.terminal_id' ./fixtures/header.json`
+app_ver=`jq '.app_ver' ./fixtures/header.json | tr -d '"'`
+terminal_id=`jq '.terminal_id' ./fixtures/header.json | tr -d '"'`
 #master_ver='1190000'
 
 # $1 = data string
@@ -19,5 +19,8 @@ function send_request {
         -H "Accept-Encoding: gzip" \
         -H "Content-Type: application/x-www-form-urlencoded" \
         -d "$data" \
-        "$url"
+        "$url" \
+        | gunzip - \
+        | jq
+
 }
