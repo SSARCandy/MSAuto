@@ -8,11 +8,10 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
-  54,22,63,78,38,70,84, //sliver
-  59,80,71,64 // gold
-  //1625,
-  //1695,
-  //1699
+  //33,39,55, 83,
+  59,80,71,64,
+  54,22,63,78,38,70,84,
+
 ];
 
 request(msaapi.getRequestOptions(api.guild.shop.update, {}))
@@ -22,6 +21,7 @@ request(msaapi.getRequestOptions(api.guild.shop.update, {}))
     console.log('--------------START------------------');
     if (data.response.error_code != 0) {
       console.log(`ERROR when ${api.guild.shop.update}`);
+      console.log(data);
       return;
     }
     //console.log(data)
@@ -35,7 +35,6 @@ request(msaapi.getRequestOptions(api.guild.shop.update, {}))
         request(msaapi.getRequestOptions(`${api.guild.shop.buy}?kpi1=${contents[i].item_id}&kpi2=5`, { 'content_idx': i }))
           //.pipe(zlib.createGunzip())
           //.pipe(bl(function (err, data) { }));
-
       }
     }
   }));

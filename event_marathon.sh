@@ -4,14 +4,14 @@ source ./utils/send_request.sh
 
 # easy10 =
 # hell10 = 1774
-stage_id=4663 #hell stage 4
+stage_id=4859 #4663 #hell stage 4
 
 # easy 3
 # hard 4
 # hell 5
 drop_num=5
 
-units="unit_ids[]=1015&unit_ids[]=674&unit_ids[]=735&unit_ids[]=775&unit_ids[]=1004&unit_ids[]=1028&unit_ids[]=1029&unit_ids[]=222&unit_ids[]=130&unit_ids[]=1024"
+units="unit_ids[]=1071&unit_ids[]=1063&unit_ids[]=41&unit_ids[]=188&unit_ids[]=1070&unit_ids[]=1052&unit_ids[]=1053&unit_ids[]=1004&unit_ids[]=994&unit_ids[]=945"
 
 for ((i = 1; i <= $1; i++));
 do

@@ -8,9 +8,9 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
-  30,31,32,33,39,50,55,65,79,
-  83,
-  72
+  //30,31,32,33,39,50,55,65,79, 83,
+  59,80,71,64,
+  54,22,63,78,38,70,84, 
 
 ];
 
