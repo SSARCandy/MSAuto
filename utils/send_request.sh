@@ -14,7 +14,7 @@ function send_request {
         -H "terminal_id: $terminal_id" \
         -H "isr: 0" \
         -H "app_ver: $app_ver" \
-        -H "Host: msaapi.snkplaymore.info" \
+        -H "Host: msattack.snkplaymore.info" \
         -H "Connection: Keep-Alive" \
         -H "Accept-Encoding: gzip" \
         -H "Content-Type: application/x-www-form-urlencoded" \

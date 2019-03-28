@@ -6,9 +6,9 @@ echo "Raid STANDARD 1-1 and ELITE 1-1"
 
 send_request \
     "num=1&stage_id=1" \
-    "https://msaapi.snkplaymore.info/world_map/raid/?kpi1=1&kpi2=1" > /dev/null
+    "https://msattack.snkplaymore.info/world_map/raid/?kpi1=1&kpi2=1" > /dev/null
 
 send_request \
     "num=1&stage_id=71" \
-    "https://msaapi.snkplaymore.info/world_map/raid/?kpi1=71&kpi2=1" > /dev/null
+    "https://msattack.snkplaymore.info/world_map/raid/?kpi1=71&kpi2=1" > /dev/null
 

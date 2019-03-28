@@ -8,5 +8,5 @@ do
 
     send_request \
         "gacha_id=1&num=10" \
-        "https://msaapi.snkplaymore.info/gacha/play/?kpi1=1&kpi2=10">/dev/null
+        "https://msattack.snkplaymore.info/gacha/play/?kpi1=1&kpi2=10">/dev/null
 done
