@@ -1,7 +1,7 @@
 'use strict';
 
 const myHeader = require('./fixtures/header.json');
-const BASE_URL = 'https://msaapi.snkplaymore.info/';
+const BASE_URL = 'https://msattack.snkplaymore.info/';
 exports.api = {
     search: {
         top: 'search/top/',
