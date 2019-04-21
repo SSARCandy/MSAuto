@@ -12,6 +12,7 @@ const msaapi = require('./msaapi');
 request(msaapi.getRequestOptions(api.search.top, {}))
   .pipe(zlib.createGunzip())
   .pipe(bl(function (err, data) {
+    console.log(err, data)
     data = JSON.parse(data.toString());
     console.log('--------------START------------------');
     if (data.response.error_code != 0) {
