@@ -8,7 +8,6 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 
-
 request(msaapi.getRequestOptions(api.search.top, {}))
   .pipe(zlib.createGunzip())
   .pipe(bl(function (err, data) {

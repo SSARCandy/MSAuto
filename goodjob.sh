@@ -8,5 +8,5 @@ do
 
     send_request \
         "member_id=qtdlG45bX9FrgjN6JD7T8oKy3E2u1IfS&type=2" \
-        "https://msattack.snkplaymore.info/guild/gj/">/dev/null
+        "https://msattack.snkplaymore.info/guild/gj/" | jq
 done

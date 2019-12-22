@@ -6,7 +6,7 @@ stage_id=$1
 
 drop_num=4
 
-unit_ids="unit_ids[]=1194&unit_ids[]=1153&unit_ids[]=1184&unit_ids[]=1013&unit_ids[]=1204&unit_ids[]=1206&unit_ids[]=8&unit_ids[]=48&unit_ids[]=25&unit_ids[]=1197"
+unit_ids="unit_ids[]=1194&unit_ids[]=1184&unit_ids[]=1164&unit_ids[]=1283&unit_ids[]=1284&unit_ids[]=1236&unit_ids[]=156&unit_ids[]=62&unit_ids[]=185&unit_ids[]=1278"
 
 echo "Start event $stage_id"
 send_request \

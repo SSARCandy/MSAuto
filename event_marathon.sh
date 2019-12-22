@@ -4,7 +4,7 @@ source ./utils/send_request.sh
 
 # easy10 =
 # hell10 = 1774
-stage_id=5621
+stage_id=5982
 
 if [ $2 != "" ]; then
     stage_id=$2
@@ -16,7 +16,7 @@ echo $stage_id
 # hell 5
 drop_num=5
 
-units="unit_ids[]=1004&unit_ids[]=1194&unit_ids[]=1184&unit_ids[]=1112&unit_ids[]=1168&unit_ids[]=1215&unit_ids[]=1216&unit_ids[]=113&unit_ids[]=399&unit_ids[]=1211"
+units="unit_ids[]=1194&unit_ids[]=1184&unit_ids[]=1164&unit_ids[]=694&unit_ids[]=1294&unit_ids[]=1250&unit_ids[]=1295&unit_ids[]=106&unit_ids[]=399&unit_ids[]=1288"
 
 for ((i = 1; i <= $1; i++));
 do
