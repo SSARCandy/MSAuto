@@ -15,8 +15,9 @@ const want2buy = [
   //2460,// 雷歐娜 ver. hero
   //2126,// 特務飛澳
   //2309,// 特務胖馬可
-  2397,// 長夏莉塔
+  //2397,// 長夏莉塔
   //2591,// 萬聖節尼基特
+  30,39,72, 
 
 ];
 
@@ -37,6 +38,7 @@ request(msaapi.getRequestOptions(api.sneak.shop.update, {}))
     console.log('--------------START------------------');
     if (data.response.error_code != 0) {
       console.log(`ERROR when ${api.sneak.shop.update}`);
+      console.log(data) 
       return;
     }
 
