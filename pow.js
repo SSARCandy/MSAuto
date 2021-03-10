@@ -8,29 +8,60 @@ const bl = require('bl');
 const api = require('./msaapi').api;
 const getRequestOptions = require('./msaapi').getRequestOptions;
 
-let count = parseInt(process.argv[2], 10);
-console.log(count);
+const affiliation = parseInt(process.argv[2], 10);
+console.log(affiliation);
 
-function winOnePow() {
+function start_pow() {
+  request(getRequestOptions(api.pow.start, {
+      affiliation: affiliation,
+    }))
+    .pipe(zlib.createGunzip())
+    .pipe(bl(function(err, data) {
+      data = JSON.parse(data.toString());
+      if (data.response.error_code != 0) {
+        console.log(`ERROR`);
+        return;
+      }
+
+      const { pow: { stage_type }, user: { stamina } } = data;
+      console.log(`stage_types=${stage_type}`);
+      for (let type of stage_type) {
+        console.log(`next stage type=${type}`);
+        winOnePow(type);
+      }
+    }));
+}
+
+function resume_pow() {
   request(getRequestOptions(api.pow.top, {}))
     .pipe(zlib.createGunzip())
     .pipe(bl(function(err, data) {
       data = JSON.parse(data.toString());
       if (data.response.error_code != 0) {
-        console.log(`ERROR when ${api.pow.top}`);
+        console.log(`ERROR`);
         return;
       }
 
-      if (!Boolean(count--)) return;
+      const { pow: { stage_type, stage_no }, user: { stamina } } = data;
+      console.log(`stage_types=${stage_type}, current_stage=${stage_no}`);
 
-      job(`/bin/bash utils/pow_start.sh 1`);
-      job(`/bin/bash utils/pow_rescue.sh`);
-      
-      winOnePow();
+      for (let i=parseInt(stage_no); i<=10; ++i) {
+        console.log(`next stage type=${stage_type[i-1]}`);
+        winOnePow(stage_type[i-1]);
+      }
     }));
 }
 
-winOnePow();
+function winOnePow(type) {
+  job(`/bin/bash utils/pow_start.sh ${type}`);
+  job(`/bin/bash utils/pow_rescue.sh`);
+}
+
+if (affiliation === -1) {
+  resume_pow();
+} else {
+  start_pow();
+}
 
 const job = (str, option) => {
   return cp.execSync(str, { cwd: __dirname }).toString();

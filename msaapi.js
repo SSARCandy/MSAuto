@@ -25,9 +25,10 @@ exports.api = {
         }
     },
     pow: {
+        start: 'pow/start/',
         top: 'pow/top/',
-        start: 'pow/battle_start/',
-        win: 'pow/battle_win/',
+        battle_start: 'pow/battle_start/',
+        battle_win: 'pow/battle_win/',
     },
     one_on_one: {
         top: 'off_1on1/top',
