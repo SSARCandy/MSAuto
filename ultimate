@@ -1,6 +1,0 @@
-curl -H 'devicemodel: D5503' -H 'terminal_type: Android' -H 'terminal_id: 9bhuFZl6jx9IakWMcoKq3jc1oO+UkCbhFqcOJG0xh/2pynmZU8v+ow=='\
-    -H 'osversion: 5.1.1' -H 'isr: 0' -H 'master_ver: 5040000' -H 'app_ver: 5040000' \
-    -H 'User-Agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; D5503 Build/14.6.A.1.236)' \
-    -H 'Host: msattack.snkplaymore.info' \
-    --data "cover=0&deck_no=25&stage_id=22001&unit_ids[]=1071&unit_ids[]=866&unit_ids[]=1017&unit_ids[]=1015&unit_ids[]=947&unit_ids[]=596&unit_ids[]=867&unit_ids[]=815&unit_ids[]=708&unit_ids[]=945&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50&unit_level[]=50" --compressed \
-    'https://msattack.snkplaymore.info/ultimate_mission/battle_start/?kpi1=22001'
