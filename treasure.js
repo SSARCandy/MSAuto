@@ -11,6 +11,7 @@ const msaapi = require('./msaapi');
 request(msaapi.getRequestOptions(api.search.top, {}))
   .pipe(zlib.createGunzip())
   .pipe(bl(function (err, data) {
+    console.log(err)
     data = JSON.parse(data.toString());
 
     console.log('--------------START------------------');
@@ -35,6 +36,7 @@ request(msaapi.getRequestOptions(api.search.top, {}))
           data = JSON.parse(data.toString());
           if (data.response.error_code != 0) {
             console.log(`ERROR when restarting ${id}`);
+            console.log(data);
           } else {
             console.log(`restarting.... ${id} done.`);
           }
@@ -55,6 +57,7 @@ request(msaapi.getRequestOptions(api.search.top, {}))
           data = JSON.parse(data.toString());
           if (data.response.error_code != 0) {
             console.log(`ERROR when collecting ${s.point_id}`);
+            console.log(data);
           } else {
             console.log(`collecting.... ${s.point_id} done.`);
           }

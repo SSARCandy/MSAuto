@@ -24,6 +24,11 @@ exports.api = {
             buy: 'sneak_shop/buy'
         }
     },
+    pow: {
+        top: 'pow/top/',
+        start: 'pow/battle_start/',
+        win: 'pow/battle_win/',
+    },
     one_on_one: {
         top: 'off_1on1/top',
         get_enemy: 'off_1on1/get_enemy',

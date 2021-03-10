@@ -4,7 +4,7 @@ source ./utils/send_request.sh
 
 stage_id=$1
 
-drop_num=4
+drop_num=3
 
 echo "Start event $stage_id"
 send_request \

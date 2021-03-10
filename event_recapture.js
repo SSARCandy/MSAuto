@@ -30,10 +30,10 @@ function winOneRecapture() {
       console.log(`next_stage_id: ${next_stage_id}, ${count} recapture_stage left. event_point: ${point}, stamina: ${stamina}`);
       job(`/bin/bash ./utils/event_recapture.sh ${next_stage_id}`);
 
-      if (!!recapture_stage) {
+      if (recapture_stage) {
         count--;
-        if (!Boolean(count)) return;
       }
+      if (count <= 0) return;
 
       winOneRecapture();
     }));

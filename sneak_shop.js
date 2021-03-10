@@ -8,28 +8,31 @@ const api = require('./msaapi').api;
 const msaapi = require('./msaapi');
 
 const want2buy = [
-  //30,31,32,33,39,50,55,65,79, 83,
-  //59,80,71,64,
-  //54,22,63,78,38,70,84, 
+  30, //Two Machine Guns
+  ////31, //斬鐵刀
+  ////32, //Thunder Shot
+  //33, //機槍
+  39, //電池
+  //50, //黃金蝙蝠
+  55, //聖水
+  ////65, //阿拉伯眼淚
+  72, //徽章 （白金）
+  ////79, //內褲
+  83, //蘋果桶
 
-  //2460,// 雷歐娜 ver. hero
-  //2126,// 特務飛澳
-  //2309,// 特務胖馬可
-  //2397,// 長夏莉塔
-  //2591,// 萬聖節尼基特
-  30,39,72, 
+  59, // 鳥巢
+  80, // 豬
+  71, // 金徽章
+  64, // 赤寶石
 
+  54, // 藥
+  //22, // D
+  63, // 黃寶石
+  78, // 植木
+  //38, // 機雷
+  70, // 瘦身藥
+  //84, // 魚
 ];
-
-const parts = {};
-//function fetch_unit_part_map(user) {
-  //for (let u of user.units.unit) {
-    //if (~want2buy.indexOf(u.param.unit_id)) {
-      //parts[unit_id] = 
-    //}
-  
-  //}
-//}
 
 request(msaapi.getRequestOptions(api.sneak.shop.update, {}))
   .pipe(zlib.createGunzip())
@@ -43,6 +46,7 @@ request(msaapi.getRequestOptions(api.sneak.shop.update, {}))
     }
 
     let {info: {contents}, user} = data;
+    //console.log(JSON.stringify(data));
     
     for (let i=0; i<contents.length; i++) {
       if (~want2buy.indexOf(contents[i].item_id)) {

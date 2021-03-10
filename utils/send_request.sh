@@ -26,7 +26,7 @@ function send_request {
         -H "Content-Type: application/x-www-form-urlencoded" \
         -d "$data" \
         "$url" \
-        | gunzip - \
-        | jq '.'
+        > /dev/null
+        #| jq '.' #> /dev/null
 
 }

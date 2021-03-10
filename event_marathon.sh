@@ -16,7 +16,7 @@ echo $stage_id
 # hell 5
 drop_num=5
 
-units="unit_ids[]=1194&unit_ids[]=1224&unit_ids[]=1405&unit_ids[]=1466&unit_ids[]=24&unit_ids[]=40&unit_ids[]=910&unit_ids[]=574&unit_ids[]=1181&unit_ids[]=1460"
+units="unit_ids[]=1194&unit_ids[]=1504&unit_ids[]=1571&unit_ids[]=986&unit_ids[]=1495&unit_ids[]=1611&unit_ids[]=6&unit_ids[]=51&unit_ids[]=1605&unit_ids[]=1537"
 
 for ((i = 1; i <= $1; i++));
 do

@@ -7,7 +7,7 @@
 echo "[log] ---------- $(date) ----------"
 source ./utils/send_request.sh
 
-day_of_week=$(date -d '4 hours ago' +%u)
+day_of_week=$(date +%u)
 
 case $day_of_week in
     1)
@@ -48,7 +48,7 @@ echo $stage_id
 
     # Win it!
     send_request \
-        "battle_time=18&drop_num=0&stage_id=$stage_id&type=1&eagle_eye=7xIkiBw%2FdTpUroqLBSgevl5%2Fi0EF3TL2yDgJ8%2FTapsfRd3MtQSmd8nS%2FoPcdo6kuK9xGW41JxNbcKGcSeEq35Tch6ELBlW0OLB8eduwOhRES2ddGA4JMC5%2B7Rv1E78DoEdG%2Fa0MmTNFSKf8urjVXTD2N%2F%2B63QVWeHu1ERHQuLePBwKo9V8CC7xc7EyhbuGbkZlRS2I3r%2BD6EWjQBmkcVRe%2B8wvmQuvVJZxkibnUwM71EShXPG3GGaSU%2FI3cUagsEzNbrrGTXHITvW3F4YDxbAczZjV%2BBXCCl4SDVce2S0SFWh46kI5n%2B3EkK0HzcL2Pfa%2BDQxurMW5Z8Vu5O%2BM%2BEtJ3dmwbFt7pM6kh70oTLAkce9nABf9S%2FHQl0%2FaAPxG0NeQQ83ZxYpODR8Ayn%2FtZDBoW5Y3Q6fZr3nb8fJFWh8VC%2FZD8nYynqeW0fWbDQystfClbie8SJ%2F%2FadEJgTbBuumm46QDuL%2BdFvLdqfhv%2BnesL0PR8Mx5WIbgX7KPaIgXkWjQEnZt%2FVx4%2BY%2FpXK49azdPAYAMwNQe0KamMbqVuUnDBprGj057fBkU9zfdlj842qOSz5FW202g0neM0dArx%2BzHqR0Op4qn1Zq9%2FeJuhTK6oVEA4Q7xxiPlJAxRjnNSdyiQXVWg9J1PiJlXK82I8NuT3vhtMohtzPl9Es8sbnBdMZx3HGQz8%2F8t3tidVtpJRoQyoM%2BTQae2KFYcL%2ByDgRrkm0D%2FFmlEdaPnuLKzktb4tEaC1YhoyvPKb%2BsnOJkMUV" \
+        "battle_time=18&drop_num=0&stage_id=$stage_id&type=1&eagle_eye=M%2Bc07OfRclnF3oXf330Q0i84KCQzmu7wdNVmpaPU3oWLnyVcqG5Xa7AK1z2T6QjPxqVBRaunovUF4GZgsFj4V0yAJ4CX4Z8%2ByKn25BJZNbXbonOBl9E66aFtG8aTIWgQqUV26C%2BADuBrtuK59bAqDTn%2BQqXzem6%2FN4SI3hVu9MCdbZYvb0QOrdH%2Fy9UXbLeDVvEUE9AzxiYemZsxIwSegt0SsAYGvB7%2FYJM6QfEot6aPX0xngDZXO3yg1j0WXhfe3bx12MVluBwRz58LroGLgawf9e4u58joUGpg6egBEhfQokU%2BEDdINI3qmp%2BYkAv40PA0FgGuiTj6cyOiLV35Y%2BOVYw%2BeeWisqqyVJuz%2FvHI3Hs9sC2u6mcqkpOiIyel2HEROCkS5UPLwHUuDZTEaEWu0%2F0R%2BDoOxgsp0OUh5NUaCybET9mzOJ4qkkK6rdbEXpXAF%2FPZBuJ7G4CobS6WiY64LZkc%2BH85%2FryjteRknIWKf0S%2FQDFH7pzhjTYBZoNcEtNlyrVhDWIjAeq865tn3%2FVuejAS6b%2BpWJf3%2BghTGF%2Bf%2F79Tg5ACPMWrldFyKtbweNLqNXj83CV2bgmX6a7KSKjD0vwLkI3Mxr8D%2FPKImKJGeeMtdXIYKvTIcJ%2FYm9AN1NzXHy725wE%2FfFdICrAVRyrjGsBO0LWPjPh2tFWBVDcXhHH6%2BFcfNELWMqS%2BD9ULnSeyX9wBODopRprY8ko9J9Jhf7Pbg4TXJwxnHD6dwEh8%3D&hawk_eye=wM1N4we2vG9%2BCycFQVxVEkwxVGlIHV4kT8BuP03ZeELmxK0nK3UXiusDb%2BG1%2BvqTrR0xldcG2flNKk6OUB6zG%2BLYlFVVALNiq%2BhJPs1zrRs4nlyXQgFMq7gHkMUCDPKcvwgZVePk8lf7%2FT1loE3lPnuZjGX0UaEVmnsN4yolv3QffrlPz4y%2FjKY2LDWJF9xhMAGN2qqMgkszARDbLEiAtlR%2BKNod8dFOmIoj7dvuwDmbJsKH0DemD4ohBPGKwvdjqTWM709zqqQLV3J5GGwLvdJj4ATdVGf7rSjw6yAL90qQMeJPC3F3MCmLbnwe1vqiV5umiipax4zS3%2F9y3iOZ7inAAOthlYbY0xnM6uXNr8YN7vGTcRbo%2BPuJ1OfUVKsJqgWecnt%2BwLNP2lQRCsIA4uRrf89I2OHDgHa7e5mmNd4Y3Gp5skR3DGYutSGXytgIKgEx4w5gD1sceX7ALK6d02tsQahxEKXX%2B26e2b6%2B2LL%2Fp7xc5I6goy6%2F4oI6m6sIRXryZKXxsCg9WmWuhaEHwqiS2PYXpexTA90anOopfVZ4gd9lFYPDFrHK1DffPgzbDTQNlkVXKZvP6djIDA8G4zE27HmBTriTWzpUUvziEOvQbC2XhcharsUBVsQUaacSuHxVxnb09YBlLPuzQpDYWiLXTw0bEy0HqJ%2BCiNwEXX6HfXEeRkx2%2FxGVlskIc3XLh6dTZvqlfLlyGFP4IQwMy7jDn%2Fcx5k06g1qM18l2IQeMYSVKxS3qjyjjVlBK4vkr" \
         "https://msattack.snkplaymore.info/world_map/battle_win/?kpi1=0&kpi2=$stage_id&kpi3=1&kpi4=1" > /dev/null
 
     echo "[log] Mission Complete: $stage_id...$i"

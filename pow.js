@@ -11,30 +11,26 @@ const getRequestOptions = require('./msaapi').getRequestOptions;
 let count = parseInt(process.argv[2], 10);
 console.log(count);
 
-function winOneSneak() {
-  request(getRequestOptions(api.sneak.top, {}))
+function winOnePow() {
+  request(getRequestOptions(api.pow.top, {}))
     .pipe(zlib.createGunzip())
     .pipe(bl(function(err, data) {
       data = JSON.parse(data.toString());
       if (data.response.error_code != 0) {
-        console.log(`ERROR when ${api.sneak.top}`);
+        console.log(`ERROR when ${api.pow.top}`);
         return;
       }
 
       if (!Boolean(count--)) return;
 
-      const { sneak: { sneak_stage_id } } = data;
-
-      // XDDD
-      console.log(`Start, Win and Collecting items for stage: ${sneak_stage_id}`);
-      job(`/bin/bash utils/sneak_start.sh ${sneak_stage_id}`);
-      console.log(`Mission Complete stage: ${sneak_stage_id}`);
+      job(`/bin/bash utils/pow_start.sh 1`);
+      job(`/bin/bash utils/pow_rescue.sh`);
       
-      winOneSneak();
+      winOnePow();
     }));
 }
 
-winOneSneak();
+winOnePow();
 
 const job = (str, option) => {
   return cp.execSync(str, { cwd: __dirname }).toString();
