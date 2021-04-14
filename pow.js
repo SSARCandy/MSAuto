@@ -7,29 +7,14 @@ const zlib = require('zlib');
 const bl = require('bl');
 const api = require('./msaapi').api;
 const getRequestOptions = require('./msaapi').getRequestOptions;
-
-const affiliation = parseInt(process.argv[2], 10);
-console.log(affiliation);
+const affiliation = process.argv[2];
+const job = (str, option) => {
+  return cp.execSync(str, { cwd: __dirname }).toString();
+};
 
 function start_pow() {
-  request(getRequestOptions(api.pow.start, {
-      affiliation: affiliation,
-    }))
-    .pipe(zlib.createGunzip())
-    .pipe(bl(function(err, data) {
-      data = JSON.parse(data.toString());
-      if (data.response.error_code != 0) {
-        console.log(`ERROR`);
-        return;
-      }
-
-      const { pow: { stage_type }, user: { stamina } } = data;
-      console.log(`stage_types=${stage_type}`);
-      for (let type of stage_type) {
-        console.log(`next stage type=${type}`);
-        winOnePow(type);
-      }
-    }));
+  job(`/bin/bash utils/pow_restart.sh ${affiliation}`);
+  resume_pow();
 }
 
 function resume_pow() {
@@ -42,6 +27,7 @@ function resume_pow() {
         return;
       }
 
+      console.log(data.pow);
       const { pow: { stage_type, stage_no }, user: { stamina } } = data;
       console.log(`stage_types=${stage_type}, current_stage=${stage_no}`);
 
@@ -57,12 +43,9 @@ function winOnePow(type) {
   job(`/bin/bash utils/pow_rescue.sh`);
 }
 
-if (affiliation === -1) {
+if (affiliation === '-1') {
   resume_pow();
 } else {
   start_pow();
 }
 
-const job = (str, option) => {
-  return cp.execSync(str, { cwd: __dirname }).toString();
-};
